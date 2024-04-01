@@ -120,6 +120,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
+chatenv
 .env
 .venv
 env/
@@ -127,7 +128,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-
+chatpdfenv
 # Spyder project settings
 .spyderproject
 .spyproject

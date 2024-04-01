@@ -107,7 +107,7 @@ def main():
     st.set_page_config("Chat PDF📝")
     st.header("Question and Answer with PDF ⭐")
 
-    user_question = st.text_input("Ask a Question from the PDF Files")
+    user_question = st.text_input("Ask a Question from the PDF")
 
     if user_question:
         user_input(user_question)
@@ -116,11 +116,11 @@ def main():
         st.title("Menu:")
         pdf_docs = st.file_uploader("Upload your PDF Files and  Submit", accept_multiple_files=True)
         if st.button("Submit "):
-            with st.spinner("Processing..."):
+            with st.spinner("loading..."):
                 raw_text = get_pdf_text(pdf_docs)
                 text_chunks = get_text_chunks(raw_text)
                 get_vector_store(text_chunks)
-                st.success("Done")
+                st.success("Successful")
 
 
 
